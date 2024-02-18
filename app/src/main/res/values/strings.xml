@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">gymNashaat</string>
+    <string name="all_players">All Players</string>
+    <string name="delete_all_rows">delete all rows</string>
+    <string name="add_player">add Player</string>
+    <string name="create_player">Create Player</string>
+</resources>
