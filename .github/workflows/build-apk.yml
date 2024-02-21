@@ -16,6 +16,9 @@ jobs:
       # java setup
       - name: Setup Java JDK
         uses: actions/setup-java@v4.0.0
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
 
       # check gradle wrapper
       - name: Gradle Wrapper Validation
