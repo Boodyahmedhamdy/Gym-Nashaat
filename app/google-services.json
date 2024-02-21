@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1008926776075",
+    "project_id": "gym-nashaat",
+    "storage_bucket": "gym-nashaat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008926776075:android:a46d2f82a4987a2e7aa00e",
+        "android_client_info": {
+          "package_name": "com.example.gymnashaat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd60jCkndbwXXWpllohRH36bbmphmUGt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

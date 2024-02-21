@@ -20,3 +20,12 @@ fun PlayerUiState.toEntity(): PlayerEntity {
         imageId = imageId
     )
 }
+
+fun PlayerUiState.toFirestoreObject(): HashMap<String, Any?> {
+    return hashMapOf(
+        "id" to id,
+        "name" to name,
+        "phone" to phoneNumber,
+        "image_id" to imageId
+    )
+}
