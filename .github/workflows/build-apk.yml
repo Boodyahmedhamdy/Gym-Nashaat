@@ -30,9 +30,13 @@ jobs:
 #      - name: Build with Gradle
 #        run: ./gradlew build
 
+      # dependency submission on gradle
+      - name: Generate and submit dependency graph
+        uses: gradle/actions/dependency-submission@v3
+
       # building with gradle
-      - name: Build with Gradle
-        uses: gradle/actions@v3.1.0
+#      - name: Build with Gradle
+#        uses: gradle/actions@v3.1.0
 
       # upload generated apk
       - name: Upload a Build Artifact
