@@ -1,25 +1,32 @@
-name: Build APK
+name: Build-Apk
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK
-        uses: actions/setup-java@v3
+      # checkout
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      # java setup
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.0.0
+
+      # check gradle wrapper
+      - name: Gradle Wrapper Validation
+        uses: gradle/wrapper-validation-action@v2.1.1
+
+      # building with gradle
+      - name: Build with Gradle
+        uses: gradle/actions@v3.1.0
+
+      # upload generated apk
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.1
         with:
-          java-version: 1.8
-          distribution: 'adoptOpenJDK'
-      - name: Install Gradle
-        uses: gradle/wrapper-validation@v4
-      - name: Build APK
-        run: ./gradlew assembleRelease
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: android-apk
-          path: app/build/outputs/apk/release/*.apk
+          name: Gym-Nashaat.apk
